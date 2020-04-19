@@ -1,0 +1,5 @@
+CREATE TABLE recharge (
+  id BIGINT NOT NULL PRIMARY KEY,
+  amount INTEGER NOT NULL,
+  number VARCHAR(20) NOT NULL
+)
