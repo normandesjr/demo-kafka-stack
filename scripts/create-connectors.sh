@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl -x POST -H "Contenty-Type: application/json" --data '{"name": "jdbc_source_postgres_02","config": {"connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector","connection.url": "jdbc:postgresql://postgres:5432/rechargedb","connection.user": "postgres","connection.password": "postgres","topic.prefix": "postgres-02-","poll.interval.ms" : 5000,"table.whitelist" : "recharge","mode":"incrementing","incrementing.column.name": "id"}}'
+curl -X POST -H "Content-Type: application/json" --data '{"name": "jdbc_source_postgres_02","config": {"connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector","connection.url": "jdbc:postgresql://postgres:5432/rechargedb","connection.user": "postgres","connection.password": "postgres","topic.prefix": "postgres-02-","poll.interval.ms" : 5000,"table.whitelist" : "recharge","mode":"incrementing","incrementing.column.name": "id"}}' http://connect:8083/connectors
